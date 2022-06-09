@@ -1,0 +1,26 @@
+.navbar {
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 55px;
+  min-width: 100%;
+  background-color: #f55a5a;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar--logo {
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+}
+
+.navbar--title {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 18px;
+  letter-spacing: -0.075em;
+  color: #ffffff;
+}

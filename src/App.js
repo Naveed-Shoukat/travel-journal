@@ -1,23 +1,20 @@
-import logo from './logo.svg';
 import './App.css';
+import TravelJournalData from './TravelJournalData.js';
+import TravelJournalItem from './components/TravelJournalItem';
+import Nav from './components/Nav';
 
 function App() {
+  const TravelJournalItems = TravelJournalData.map((item) => (
+    <TravelJournalItem key={item.id} {...item} />
+  ));
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+      <header>
+        <Nav />
       </header>
+      <section>{TravelJournalItems}</section>
+      <footer>Developed by Navi's Development @ 2022</footer>
     </div>
   );
 }
